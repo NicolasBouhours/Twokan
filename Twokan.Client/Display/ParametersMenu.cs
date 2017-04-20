@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Twokan.Client.Display
 {
-    class ParametersMenu
+    sealed class ParametersMenu
     {
         #region Fields
 
@@ -52,7 +52,7 @@ namespace Twokan.Client.Display
             int intInput;
             do
             {
-                Console.WriteLine(subject.ToString()+":");
+                Console.WriteLine(subject+":");
                 string input = Console.ReadLine();
                 
                 if (int.TryParse(input, out intInput))

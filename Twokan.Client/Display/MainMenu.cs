@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Twokan.Client.Display
 {
-    class MainMenu
+    sealed class MainMenu
     {
         public MainMenu()
         {
