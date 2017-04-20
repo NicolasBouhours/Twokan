@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Twokan.Server.Model;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
+    using System;
+    using Twokan.Server.Model;
+
     public class QuestionUI
     {
         public static void StartQuestionUI(Question q)
         {
             Console.Clear();
-            Console.WriteLine("Twokan : Question " + q.Title);
+            Console.WriteLine(String.Format("Twokan : Question {0}", q.Title));
             Console.WriteLine("----------------");
             Console.WriteLine(q.Content);
             Console.WriteLine("----------------");
@@ -21,7 +17,7 @@ namespace Twokan.Server.Display
 
             foreach (string s in q.Choices)
             {
-                Console.WriteLine(i + " - " + s);
+                Console.WriteLine(String.Format("{0} - {1}", i, s));
                 i++;
             }
 

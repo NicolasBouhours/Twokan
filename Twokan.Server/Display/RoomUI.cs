@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Twokan.Server.Model;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
+    using System;
+    using System.Threading;
+    using Twokan.Server.Model;
+
     public class RoomUI
     {
         public static void StartRoomUI(Room r)
