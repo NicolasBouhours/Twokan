@@ -1,12 +1,26 @@
-﻿namespace Twokan.Server
-{
-    using Twokan.Server.Display;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-    public static class Program
+namespace Twokan.Server
+{
+    class Program
     {
-        private static void Main()
+        static void Main(string[] args)
         {
-            MainUI.Start();
+            bool isRunning = true;
+            Console.WriteLine("Twokan : serveur");
+
+            TwokanServer server = new TwokanServer("127.0.0.1", 2000);
+
+            // Behaviour server here
+            while(isRunning)
+            {
+                server.Send(null, "test");
+            }
+            
         }
     }
 }
