@@ -15,6 +15,9 @@ namespace Twokan.Client.Display
 
         #region Methods
 
+        /// <summary>
+        /// Show main menu and wait for user input
+        /// </summary>
         public void Show()
         {
             Console.WriteLine("Menu: TWOKAN");

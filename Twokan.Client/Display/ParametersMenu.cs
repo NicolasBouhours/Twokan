@@ -46,6 +46,11 @@ namespace Twokan.Client.Display
 
         #region Methods
 
+        /// <summary>
+        /// Ask user to enter int parameter
+        /// </summary>
+        /// <param name="subject">Message to show</param>
+        /// <returns></returns>
         private int Ask(string subject)
         {
             bool error = true;
