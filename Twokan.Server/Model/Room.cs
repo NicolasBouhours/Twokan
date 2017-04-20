@@ -4,32 +4,16 @@
 
     public class Room
     {
-        private int id;
+        public int Id { get; set; }
 
-        private ICollection<Question> listQuestions;
+        public ICollection<Question> ListQuestions { get;  }
 
-        private ICollection<Gamer> listGamers;
-
-        public ICollection<Gamer> ListGamers
-        {
-            get { return listGamers; }
-        }
-
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-        public ICollection<Question> ListQuestions
-        {
-            get { return listQuestions; }
-        }
+        public ICollection<Gamer> ListGamers;
 
         public Room()
         {
-            this.listGamers = new List<Gamer>();
-            this.listQuestions = new List<Question>();
+            this.ListGamers = new List<Gamer>();
+            this.ListQuestions = new List<Question>();
         }
     }
 }

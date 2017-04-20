@@ -4,29 +4,11 @@
 
     public class Gamer
     {
-        private int id;
+        public int Id { get; set; }
 
-        private String name;
+        public String Name { get; set; }
 
-        private int score;
-
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-        public String Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Score
-        {
-            get { return score; }
-            set { score = value; }
-        }
+        public int Score { get; set; }
 
         /// <summary>
         ///     Constructeur
@@ -36,9 +18,9 @@
         /// <param name="paramScore">Parametre Score</param>
         public Gamer(int paramId, String paramName,int paramScore)
         {
-            this.id = paramId;
-            this.name = paramName;
-            this.score = paramScore;
+            this.Id = paramId;
+            this.Name = paramName;
+            this.Score = paramScore;
         }
     }
 }
