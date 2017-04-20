@@ -30,7 +30,7 @@
                     ////TODO]
 
                     ////MainMenu main = new MainMenu();
-                    throw new NotImplementedException("Main menu not create");
+                    ////throw new NotImplementedException("Main menu not create");
                 }
             }
 
