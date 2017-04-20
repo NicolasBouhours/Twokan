@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-
     using System.Threading.Tasks;
 
     public sealed class MainMenu
@@ -33,16 +32,10 @@
                     Environment.Exit(0);
                     break;
                 case "1":
-                    // TODO
-                    // Show create room screen
-                    // GameCreate ScreenGameCreate = new GameCreate();
-                    throw new NotImplementedException();
+                    ParametersMenu ScreenParametersMenu = new ParametersMenu();
                     break;
                 case "2":
-                    // TODO
-                    // Show join room screen
-                    // GameJoin ScreenGameJoin = new GameJoin();
-                    throw new NotImplementedException();
+                    GameJoin ScreenGameJoin = new GameJoin();
                     break;
                 default:
                     // nothing

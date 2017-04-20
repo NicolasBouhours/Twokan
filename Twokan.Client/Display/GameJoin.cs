@@ -13,23 +13,20 @@
 
             ////Ask the code of the game
             Console.Clear();
-            Console.WriteLine("Code de la partie ?");
+            Console.WriteLine("Party code ?");
             code = Console.ReadLine();
 
             ////Check the format of the code
             while (!this.CheckIfCodeExist(code))
             {
                 Console.Clear();
-                Console.WriteLine("Ce code n'est pas valide veuillez en ressaisir un ou 'q' pour quitter");
+                Console.WriteLine("Invalid code, please input a valid one or press 'q' to quit");
                 code = Console.ReadLine();
 
                 ////Go back in the Main menu
                 if (code == "q")
                 {
-                    ////TODO]
-
-                    ////MainMenu main = new MainMenu();
-                    ////throw new NotImplementedException("Main menu not create");
+                    MainMenu main = new MainMenu();
                 }
             }
 

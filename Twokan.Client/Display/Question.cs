@@ -13,8 +13,8 @@
             string saisie = string.Empty;
 
             Console.Clear();
-            Console.WriteLine("Bienvenu dans la partie numéro {0} (q pour retourner au menu)", code);
-            Console.WriteLine("Appuyer sur une touche pour continuer");
+            Console.WriteLine("Welcolm in party number {0} (press q to go to menu)", code);
+            Console.WriteLine("Press any key to continue");
             saisie = Console.ReadLine();
 
             ////Check if the player want quit and quit him 
@@ -24,8 +24,7 @@
             }
 
             ////[TODO] Get the questions on the server
-
-            ////throw new NotImplementedException(No question on the server");
+            throw new NotImplementedException("No question on the server");
         }
 
         /// <summary>
@@ -38,7 +37,7 @@
             ////Go back in the menu
             if (saisie == "q")
             {
-                Console.WriteLine("Etes-vous sûr de vouloir quitter ? (Y/N)");
+                Console.WriteLine("Are you sure to exit ? (Y/N)");
                 saisie = Console.ReadLine();
 
                 ////If he want really quit
@@ -60,13 +59,7 @@
         /// </summary>
         public void QuitGame()
         {
-            //// [TODO] GO back in the main menu
-
-            ////[TODO]
-
-            ////MainMenu main = new MainMenu();
-
-            ////throw new NotImplementedException("Main menu not create");
+            MainMenu main = new MainMenu();
         }
     }
 }
