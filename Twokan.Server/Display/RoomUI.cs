@@ -1,29 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Twokan.Server.Model;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
-    public class RoomUI
+    using System;
+    using System.Threading;
+    using Twokan.Server.Model;
+
+    public static class RoomUI
     {
-        public static void StartRoomUI(Room r)
+        public static void Start(Room r)
         {
-            Console.Clear();
-            Console.WriteLine("Twokan : Room" + r.Id);
-            Console.WriteLine("----------------");
-
-            // TODO : Display room info
-            foreach (Question q in r.ListQuestions)
+            if (r != null)
             {
-                QuestionUI.StartQuestionUI(q);
-                Thread.Sleep(15000);
-            }
+                Console.Clear();
+                Console.WriteLine("Twokan : Room " + r.Id.ToString());
+                Console.WriteLine("----------------");
 
-            ScoreUI.StartScoreUI(r);
+                // TODO : Display room info
+                foreach (Question q in r.ListQuestions)
+                {
+                    QuestionUI.Start(q);
+                    Thread.Sleep(15000);
+                }
+
+                ScoreUI.Start(r);
+            }
         }
     }
 }

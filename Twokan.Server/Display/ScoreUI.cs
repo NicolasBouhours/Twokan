@@ -1,36 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Twokan.Server.Model;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
-    public class ScoreUI
+    using System;
+    using System.Collections.Generic;
+    using Twokan.Server.Model;
+
+    public static class ScoreUI
     {
-        public static void StartScoreUI(Room room)
+        public static void Start(Room room)
         {
-            Console.Clear();
-            Console.WriteLine("Twokan : Scores");
-            Console.WriteLine("----------------");
-
-            // TODO : Display scores
-
             if (room != null)
             {
-                List<Gamer> gamers = room.ListGamers;
-                if (gamers != null && gamers.Count > 0)
-                {
-                    foreach (Gamer gamer in gamers)
-                    {
-                        Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score));
-                    }
-                    Console.WriteLine("----------------");
-                }
-            }
+                Console.Clear();
+                Console.WriteLine("Twokan : Scores");
+                Console.WriteLine("----------------");
 
-            Util.QuitUI();
+                if (room != null)
+                {
+                    if (room.ListGamers != null && room.ListGamers.Count > 0)
+                    {
+                        foreach (Gamer gamer in room.ListGamers)
+                        {
+                            Console.WriteLine("Gamer " + gamer.Name + " : " + gamer.Score.ToString() + " point(s)");
+                        }
+
+                        Console.WriteLine("----------------");
+                    }
+                }
+
+                Util.QuitUI();
+            }
         }
     }
 }

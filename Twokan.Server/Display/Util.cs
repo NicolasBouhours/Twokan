@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Twokan.Server.Display;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
-    public class Util
+    using System;
+
+    public static class Util
     {
         public static void QuitUI()
         {
-            String code = "";
+            string code = string.Empty;
             do
             {
                 Console.WriteLine("X pour quitter");
                 code = Console.ReadLine().Trim();
-            } while (code != "x");
+            }
+            while (code != "x");
 
-            MainUI.StartMainUI();
+            MainUI.Start();
         }
     }
 }

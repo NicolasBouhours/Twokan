@@ -1,35 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Server.Model
+﻿namespace Twokan.Server.Model
 {
+    using System.Collections.Generic;
+
     public class Room
     {
-        private int id;
-
-        private List<Question> listQuestions;
-
-        private List<Gamer> listGamers;
-
-        public List<Gamer> ListGamers
+        public Room()
         {
-            get { return listGamers; }
-            set { listGamers = value; }
+            this.ListGamers = new List<Gamer>();
+            this.ListQuestions = new List<Question>();
         }
 
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+        public int Id { get; set; }
 
-        public List<Question> ListQuestions
-        {
-            get { return listQuestions; }
-            set { listQuestions = value; }
-        }
+        public ICollection<Question> ListQuestions { get; }
+
+        public ICollection<Gamer> ListGamers { get; }
     }
 }

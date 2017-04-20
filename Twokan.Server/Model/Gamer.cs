@@ -1,42 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Server.Model
+﻿namespace Twokan.Server.Model
 {
+    using System;
+
     public class Gamer
     {
-        private int id;
-
-        private String name;
-
-        private int score;
-
-        public int Id
+        public Gamer(int paramId, string paramName, int paramScore)
         {
-            get { return id; }
-            set { id = value; }
+            this.Id = paramId;
+            this.Name = paramName;
+            this.Score = paramScore;
         }
 
-        public String Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public int Id { get; set; }
 
-        public int Score
-        {
-            get { return score; }
-            set { score = value; }
-        }
+        public string Name { get; set; }
 
-        public Gamer(int id, String name,int score)
-        {
-            this.id = id;
-            this.name = name;
-            this.score = score;
-        }
+        public int Score { get; set; }
     }
 }

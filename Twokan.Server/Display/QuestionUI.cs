@@ -1,31 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Twokan.Server.Model;
-
-namespace Twokan.Server.Display
+﻿namespace Twokan.Server.Display
 {
-    public class QuestionUI
+    using System;
+    using Twokan.Server.Model;
+
+    public static class QuestionUI
     {
-        public static void StartQuestionUI(Question q)
+        public static void Start(Question q)
         {
-            Console.Clear();
-            Console.WriteLine("Twokan : Question " + q.Title);
-            Console.WriteLine("----------------");
-            Console.WriteLine(q.Content);
-            Console.WriteLine("----------------");
-
-            int i = 1;
-
-            foreach (string s in q.Choices)
+            if (q != null)
             {
-                Console.WriteLine(i + " - " + s);
-                i++;
-            }
+                Console.Clear();
+                Console.WriteLine("Twokan : Question " + q.Title);
+                Console.WriteLine("----------------");
+                Console.WriteLine(q.Content);
+                Console.WriteLine("----------------");
 
-            Util.QuitUI();
+                int i = 1;
+
+                foreach (string s in q.Choices)
+                {
+                    Console.WriteLine(i.ToString() + " - " + s);
+                    i++;
+                }
+
+                Util.QuitUI();
+            }
         }
     }
 }
