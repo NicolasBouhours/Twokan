@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-[assembly: CLSCompliant(true)]
-
-namespace Twokan.Client.Display
+﻿namespace Twokan.Client.Display
 {
+    using System;
+
     public class GameJoin
     {
         /// <summary>
-        /// [TODO] Demande et vérifie le code de la partie à rejoindre
+        /// Demande et vérifie le code de la partie à rejoindre
         /// </summary>
+        //[TODO] Ajout de Main Menu
         public GameJoin()
         {
             string code = string.Empty;
@@ -36,20 +30,20 @@ namespace Twokan.Client.Display
                 {
                     //[TODO]
                     //MainMenu main = new MainMenu();
+                    throw new NotImplementedException("Main menu not create");
                 }
             }
 
             //On redirige vers l'ecran quaestion
             Question q  = new Question(code);
-
-
         }
 
         /// <summary>
-        /// [TODO] Regarde si le code est au bon format et demande au serveur si la partie existe
+        /// Regarde si le code est au bon format et demande au serveur si la partie existe
         /// </summary>
         /// <param name="code">Code saisie par l'utilisateur</param>
         /// <returns></returns>
+        // [TODO] Verifie le code sur le serveur
         public bool CheckIfCodeExist(string code)
         {
             int codeNum;
@@ -58,10 +52,8 @@ namespace Twokan.Client.Display
             if (int.TryParse(code, out codeNum))
             {
                 //[TODO] Verifie si le code existe sur le serveur
-
-                return true;
+                throw new NotImplementedException("Verifier le code de la partie sur le serveur");
             }
-
 
             return false;
         }

@@ -1,22 +1,14 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Twokan.Client;
-using Twokan.Client.Display;
-
-[assembly: CLSCompliant(true)]
-
-namespace Twokan.ServerTests
+﻿namespace Twokan.ServerTests
 {
+    using NUnit.Framework;
+    using Twokan.Client.Display;
+
     [TestFixture]
     public class TestGameJoin
     {
 
         /// <summary>
-        /// [TODO] Remplacer le code par un futur code existant sur le serveur 
+        /// Remplacer le code par un futur code existant sur le serveur 
         /// </summary>
         [Test]
         public void TestCodeExistTrue()

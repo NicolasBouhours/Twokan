@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Client.Display
+﻿namespace Twokan.Client.Display
 {
+    using System;
+
     public class Question
     {
         /// <summary>
-        /// [TODO] Ecran des questions 
+        /// Ecran des questions 
         /// </summary>
         /// <param name="code">numéro de la partie</param>
+        //[TODO] Recupèrer les question sur le serveur
         public Question(string code)
         {
             string saisie = string.Empty;
 
             Console.Clear();
             Console.WriteLine("Bienvenu dans la partie numéro "+code+" (q pour retourner au menu)" );
-            Console.WriteLine("Aucune questions sur le serveur pour le moment !");
+            Console.WriteLine("Appuyer sur une touche pour continuer");
             saisie = Console.ReadLine();
 
             //Regarde si le joueur souhaite quitter la partie et le fait quitter
@@ -26,14 +23,10 @@ namespace Twokan.Client.Display
             {
                 QuitGame();
             }
-            else //[TODO] A supprimer quand il y aura les questions de disponible
-            {
-                QuitGame();
-            }
+
 
             //[TODO] Recupére les questions du jeux sur le serveur et commence le Jeux
-            
-
+            throw new NotImplementedException("Aucune question sur le serveur");
         }
 
 
@@ -67,13 +60,14 @@ namespace Twokan.Client.Display
 
 
         /// <summary>
-        /// [TODO] Retourne au Main Menu
+        /// Retourne au Main Menu
         /// </summary>
+        // [TODO] Retourner sur le main menu
         public void QuitGame()
         {
             //[TODO]
             //MainMenu main = new MainMenu();
- 
+            throw new NotImplementedException("Main menu not create");
         }
     }
 }
