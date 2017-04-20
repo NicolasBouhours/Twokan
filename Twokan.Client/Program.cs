@@ -9,33 +9,10 @@
 
     public static class Program
     {
-        #region Fields
-
-        public static MainMenu screenMainMenu;
-
-        #endregion
-
-        #region Properties
-
-        public static MainMenu ScreenMainMenu
-        {
-            get
-            {
-                return screenMainMenu;
-            }
-
-            set
-            {
-                screenMainMenu = value;
-            }
-        }
-
-        #endregion
-
         private static void Main()
         {
             Console.WriteLine("Twokan : client");
-            ScreenMainMenu = new MainMenu();
+            MainMenu mm = new MainMenu();
 
             Console.ReadLine();
         }

@@ -42,8 +42,7 @@
             }
             else
             {
-                
-                Program.ScreenMainMenu.Show();
+                MainMenu mm = new MainMenu();
             }
         }
 
