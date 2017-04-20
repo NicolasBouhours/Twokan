@@ -8,12 +8,12 @@
         private string title;
         private string content;
         private ICollection<string> choices;
-        private string result;
+        private string correct;
 
-        public string Result
+        public string Correct
         {
-            get { return result; }
-            set { result = value; }
+            get { return correct; }
+            set { correct = value; }
         }
 
         public ICollection<string> Choices
