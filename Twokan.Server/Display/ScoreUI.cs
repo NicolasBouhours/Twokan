@@ -6,6 +6,10 @@
 
     public static class ScoreUI
     {
+        /// <summary>
+        /// Enable To display the score of au gamers based on a room
+        /// </summary>
+        /// <param name="room">Room of the game</param>
         public static void Start(Room room)
         {
             if (room != null)
@@ -18,6 +22,7 @@
                 {
                     if (room.ListGamers != null && room.ListGamers.Count > 0)
                     {
+                        // loop on all the gamers and display name and the score
                         foreach (Gamer gamer in room.ListGamers)
                         {
                             Console.WriteLine("Gamer " + gamer.Name + " : " + gamer.Score.ToString() + " point(s)");

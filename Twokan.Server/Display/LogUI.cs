@@ -9,6 +9,10 @@
 
     public static class LogUI
     {
+        /// <summary>
+        /// Show log page
+        /// </summary>
+        /// <param name="clientsLogs"></param>
         public static void Start(ICollection<Log> clientsLogs)
         {
             if (clientsLogs != null)

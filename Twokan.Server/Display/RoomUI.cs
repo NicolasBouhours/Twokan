@@ -6,6 +6,10 @@
 
     public static class RoomUI
     {
+        /// <summary>
+        /// Enable to start a game by displaying all questions
+        /// </summary>
+        /// <param name="r">The room of the game</param>
         public static void Start(Room r)
         {
             if (r != null)
