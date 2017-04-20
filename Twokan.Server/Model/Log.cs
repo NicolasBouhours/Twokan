@@ -3,7 +3,7 @@
     using System;
     using System.Diagnostics.CodeAnalysis;
 
-    [SuppressMessage("Gendarme.Rules.Naming", "AvoidLackOfCohesionOfMethodsRule")]
+    [SuppressMessage("Gendarme.Rules.Maintainability", "AvoidLackOfCohesionOfMethodsRule")]
     public class Log
     {
         private string action;
