@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Twokan.Server.Model;
 
@@ -20,6 +21,26 @@ namespace Twokan.Server.Display
 
             string choice = "";
 
+            Question q = new Question();
+            q.Title = "Question 1";
+            q.Content = "Quel est la couleur du cheval blanc d'henry 4 ?";
+            List<string> choices = new List<string>();
+            choices.Add("Noir");
+            choices.Add("Vert");
+            choices.Add("Blanc");
+            choices.Add("Rose");
+            q.Result = "Blanc";
+            q.Choices = choices;
+
+            Room r = new Room();
+            r.Id = 0;
+            r.ListQuestions = new List<Question>();
+            r.ListQuestions.Add(q);
+            Question q2 = q;
+            q2.Title = "Question 2";
+            r.ListQuestions.Add(q2);
+            r.ListQuestions.Add(q);
+
 
             do
             {
@@ -34,7 +55,7 @@ namespace Twokan.Server.Display
                         this.StartLogUI();
                         break;
                     case "3":
-                        this.StartRoomUI();
+                        this.StartRoomUI(r);
                         break;
                 }
             } while (choice != "1" || choice != "2" || choice != "3");
@@ -51,7 +72,7 @@ namespace Twokan.Server.Display
             this.QuitUI();
         }
 
-        public void StartScoreUI()
+        public void StartScoreUI(Room r)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Scores");
@@ -62,15 +83,20 @@ namespace Twokan.Server.Display
             this.QuitUI();
         }
 
-        public void StartRoomUI()
+        public void StartRoomUI(Room r)
         {
             Console.Clear();
-            Console.WriteLine("Twokan : Room ID");
+            Console.WriteLine("Twokan : " + r.Id);
             Console.WriteLine("----------------");
 
             // TODO : Display room info
 
-            this.QuitUI();
+            foreach(Question q in r.ListQuestions) {
+                StartQuestionUI(q);
+                Thread.Sleep(15000);
+            }
+
+            this.StartScoreUI(r);
         }
 
         public void StartQuestionUI(Question q)
@@ -88,8 +114,6 @@ namespace Twokan.Server.Display
                 Console.WriteLine(i + " - " + s);
                     i++;
             }
-
-            this.QuitUI();
         }
 
         private void QuitUI()
