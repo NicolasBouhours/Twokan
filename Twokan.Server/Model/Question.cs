@@ -10,7 +10,7 @@
 
         public string Content { get; set; }
 
-        public ICollection<string> Choices { get;}
+        public ICollection<string> Choices { get; }
 
         public string Correct{ get; set; }
 
@@ -19,8 +19,7 @@
         /// </summary>
         public Question()
         {
-            this.Choices = new List<String>();
+            this.Choices = new List<string>();
         }
-
     }
 }
