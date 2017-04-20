@@ -27,7 +27,7 @@ namespace Twokan.Client.Display
             Console.WriteLine("WinPoint = " + WinPoint);
             Console.WriteLine("Start Game ? (yes/no)");
 
-            string input = "";
+            string input = String.Empty;
             do
             {
                 input = Console.ReadLine();
