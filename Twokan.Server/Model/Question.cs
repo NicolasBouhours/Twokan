@@ -22,7 +22,6 @@
         public ICollection<string> Choices
         {
             get { return choices; }
-            set { choices = value; }
         }
 
         public string Content

@@ -2,7 +2,7 @@
 {
     using Twokan.Server.Display;
 
-    public sealed class Program
+    public static class Program
     {
         private static void Main()
         {

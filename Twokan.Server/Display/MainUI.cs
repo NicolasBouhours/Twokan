@@ -19,8 +19,9 @@
             Room room = new Room();
             room.Id = 1;
             List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2,"Flo",10) };
-            room.ListGamers = gamers;
-            List<Log> logs = new List<Log>();
+            room.ListGamers.Add(new Gamer(1, "Nico", 5));
+            room.ListGamers.Add(new Gamer(2, "Flo", 10));
+            List <Log> logs = new List<Log>();
 
 
             do

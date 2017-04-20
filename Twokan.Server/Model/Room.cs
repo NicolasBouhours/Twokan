@@ -17,7 +17,6 @@
         public ICollection<Gamer> ListGamers
         {
             get { return listGamers; }
-            set { listGamers = value; }
         }
 
         public int Id
@@ -29,7 +28,6 @@
         public ICollection<Question> ListQuestions
         {
             get { return listQuestions; }
-            set { listQuestions = value; }
         }
     }
 }
