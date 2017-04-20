@@ -26,7 +26,7 @@
 
 
             //[TODO] Recupére les questions du jeux sur le serveur et commence le Jeux
-            throw new NotImplementedException("Aucune question sur le serveur");
+            //throw new NotImplementedException("Aucune question sur le serveur");
         }
 
 
@@ -67,7 +67,7 @@
         {
             //[TODO]
             //MainMenu main = new MainMenu();
-            throw new NotImplementedException("Main menu not create");
+            //throw new NotImplementedException("Main menu not create");
         }
     }
 }
