@@ -2,9 +2,9 @@
 {
     using Twokan.Server.Display;
 
-    class Program
+    public sealed class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             MainUI.Start();
         }
