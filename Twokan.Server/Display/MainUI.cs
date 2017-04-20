@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Twokan.Server.Model;
+
 
 namespace Twokan.Server.Display
 {
@@ -20,26 +20,10 @@ namespace Twokan.Server.Display
             Console.WriteLine("3 - Start Game");
 
             string choice = "";
-
-            Question q = new Question();
-            q.Title = "Question 1";
-            q.Content = "Quel est la couleur du cheval blanc d'henry 4 ?";
-            List<string> choices = new List<string>();
-            choices.Add("Noir");
-            choices.Add("Vert");
-            choices.Add("Blanc");
-            choices.Add("Rose");
-            q.Result = "Blanc";
-            q.Choices = choices;
-
-            Room r = new Room();
-            r.Id = 0;
-            r.ListQuestions = new List<Question>();
-            r.ListQuestions.Add(q);
-            Question q2 = q;
-            q2.Title = "Question 2";
-            r.ListQuestions.Add(q2);
-            r.ListQuestions.Add(q);
+            Room room = new Room();
+            room.Id = 1;
+            List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2,"Flo",10) };
+            room.ListGamers = gamers;
 
 
             do
@@ -49,13 +33,13 @@ namespace Twokan.Server.Display
                 switch (choice)
                 {
                     case "1":
-                        this.StartScoreUI();
+                        this.StartScoreUI(room);
                         break;
                     case "2":
                         this.StartLogUI();
                         break;
                     case "3":
-                        this.StartRoomUI(r);
+                        this.StartRoomUI();
                         break;
                 }
             } while (choice != "1" || choice != "2" || choice != "3");
@@ -72,7 +56,7 @@ namespace Twokan.Server.Display
             this.QuitUI();
         }
 
-        public void StartScoreUI(Room r)
+        public void StartScoreUI(Room room)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Scores");
@@ -80,23 +64,33 @@ namespace Twokan.Server.Display
 
             // TODO : Display scores
 
+           if(room != null)
+            {
+                List<Gamer> gamers = room.ListGamers;
+                if(gamers != null && gamers.Count > 0)
+                {
+                    foreach (Gamer gamer in gamers)
+                    {
+                        Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score));
+                    }
+                    Console.WriteLine("----------------");
+                }
+            }
+
+
+
             this.QuitUI();
         }
 
-        public void StartRoomUI(Room r)
+        public void StartRoomUI()
         {
             Console.Clear();
-            Console.WriteLine("Twokan : " + r.Id);
+            Console.WriteLine("Twokan : Room ID");
             Console.WriteLine("----------------");
 
             // TODO : Display room info
 
-            foreach(Question q in r.ListQuestions) {
-                StartQuestionUI(q);
-                Thread.Sleep(15000);
-            }
-
-            this.StartScoreUI(r);
+            this.QuitUI();
         }
 
         public void StartQuestionUI(Question q)
@@ -114,6 +108,8 @@ namespace Twokan.Server.Display
                 Console.WriteLine(i + " - " + s);
                     i++;
             }
+
+            this.QuitUI();
         }
 
         private void QuitUI()

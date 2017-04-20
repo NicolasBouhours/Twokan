@@ -8,7 +8,6 @@ namespace Twokan.Server.Model
 {
     public class Gamer
     {
-
         private int id;
 
         private String name;
@@ -31,6 +30,13 @@ namespace Twokan.Server.Model
         {
             get { return score; }
             set { score = value; }
+        }
+
+        public Gamer(int id, String name,int score)
+        {
+            this.id = id;
+            this.name = name;
+            this.score = score;
         }
     }
 }
