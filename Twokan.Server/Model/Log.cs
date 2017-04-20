@@ -1,7 +1,9 @@
 ﻿namespace Twokan.Server.Model
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
 
+    [SuppressMessage("Gendarme.Rules.Naming", "AvoidLackOfCohesionOfMethodsRule")]
     public class Log
     {
         private string action;

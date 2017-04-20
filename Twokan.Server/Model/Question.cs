@@ -2,7 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
+    [SuppressMessage("Gendarme.Rules.Naming", "AvoidLackOfCohesionOfMethodsRule")]
     public class Question
     {
         private string title;
