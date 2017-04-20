@@ -12,7 +12,7 @@
         private DateTime date;
         private Gamer gamer;
 
-        public Gamer Gamer
+        public Gamer ClientGamer
         {
             get { return gamer; }
             set { gamer = value; }
