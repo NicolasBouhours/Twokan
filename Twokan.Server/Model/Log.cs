@@ -3,31 +3,12 @@
     using System;
     using System.Diagnostics.CodeAnalysis;
 
-    [SuppressMessage("Gendarme.Rules.Maintainability", "AvoidLackOfCohesionOfMethodsRule")]
     public class Log
     {
-        private string action;
+        public string Action { get; set; }
 
-        private DateTime date;
+        public DateTime Date { get; set; }
 
-        private Gamer client;
-
-        public Gamer Client
-        {
-            get { return client; }
-            set { client = value; }
-        }
-
-        public DateTime Date
-        {
-            get { return date; }
-            set { date = value; }
-        }
-
-        public string Action
-        {
-            get { return action; }
-            set { action = value; }
-        }
+        public Gamer Client { get; set; } 
     }
 }

@@ -4,46 +4,22 @@
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
 
-    [SuppressMessage("Gendarme.Rules.Maintainability", "AvoidLackOfCohesionOfMethodsRule")]
     public class Question
     {
-        private string title;
+        public string Title { get; set; }
 
-        private string content;
+        public string Content { get; set; }
 
-        private ICollection<string> choices;
+        public ICollection<string> Choices { get;}
 
-        private string correct;
-
-        public string Correct
-        {
-            get { return correct; }
-            set { correct = value; }
-        }
-
-        public ICollection<string> Choices
-        {
-            get { return choices; }
-        }
-
-        public string Content
-        {
-            get { return content; }
-            set { content = value; }
-        }
-
-        public string Title
-        {
-            get { return title; }
-            set { title = value; }
-        }
+        public string Correct{ get; set; }
 
         /// <summary>
         ///     Contructeur
         /// </summary>
         public Question()
         {
-            this.choices = new List<String>();
+            this.Choices = new List<String>();
         }
 
     }
