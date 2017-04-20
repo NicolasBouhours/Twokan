@@ -14,7 +14,7 @@
                 Console.WriteLine("Twokan : Scores");
                 Console.WriteLine("----------------");
 
-                // TODO : Display scores
+                //TODO : Display scores
 
                 if (room != null)
                 {
@@ -22,8 +22,9 @@
                     {
                         foreach (Gamer gamer in room.ListGamers)
                         {
-                            Console.WriteLine("Gamer " + gamer.Name +  " : " + gamer.Score.ToString() +  " point(s)" );
+                            Console.WriteLine("Gamer " + gamer.Name + " : " + gamer.Score.ToString() + " point(s)");
                         }
+
                         Console.WriteLine("----------------");
                     }
                 }
