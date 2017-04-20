@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Twokan.Server.Model
 {
-    class Question
+    public class Question
     {
         private string title;
         private string content;
-        private List<string> questions;
+        private List<string> choices;
         private string result;
 
         public string Result
@@ -19,10 +19,10 @@ namespace Twokan.Server.Model
             set { result = value; }
         }
 
-        public List<string> Questions
+        public List<string> Choices
         {
-            get { return questions; }
-            set { questions = value; }
+            get { return choices; }
+            set { choices = value; }
         }
 
         public string Content

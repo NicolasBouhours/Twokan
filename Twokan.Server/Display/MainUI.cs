@@ -34,7 +34,7 @@ namespace Twokan.Server.Display
                         this.StartLogUI();
                         break;
                     case "3":
-                        this.StartQuestionUI();
+                        this.StartRoomUI();
                         break;
                 }
             } while (choice != "1" || choice != "2" || choice != "3");
@@ -83,7 +83,7 @@ namespace Twokan.Server.Display
 
             int i = 1;
 
-            foreach (string s in q.Questions)
+            foreach (string s in q.Choices)
             {
                 Console.WriteLine(i + " - " + s);
                     i++;
