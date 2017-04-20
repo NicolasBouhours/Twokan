@@ -4,7 +4,7 @@
 
     public sealed class Program
     {
-        public static void Main()
+        private static void Main()
         {
             MainUI.Start();
         }
