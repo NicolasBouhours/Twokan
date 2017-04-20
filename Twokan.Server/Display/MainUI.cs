@@ -6,8 +6,12 @@
 
     public static class MainUI
     {
+        /// <summary>
+        /// Main entry of the program. Show menu for switching to score, log and room
+        /// </summary>
         public static void Start()
         {
+            // Displaying the menu
             Console.Clear();
             Console.WriteLine("Twokan : serveur");
             Console.WriteLine("----------------");
@@ -15,6 +19,7 @@
             Console.WriteLine("2 - Log");
             Console.WriteLine("3 - Start Game");
 
+            // Mock data
             string choice;
             Room room = new Room();
             room.Id = 1;
@@ -23,6 +28,7 @@
             room.ListGamers.Add(new Gamer(2, "Flo", 10));
             List<Log> logs = new List<Log>();
 
+            // Menu switch
             do
             {
                 choice = Console.ReadLine();
