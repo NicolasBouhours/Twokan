@@ -6,12 +6,12 @@
     {
         private string action;
         private DateTime date;
-        private Gamer gamer;
+        private Gamer clientGamer;
 
         public Gamer ClientGamer
         {
-            get { return gamer; }
-            set { gamer = value; }
+            get { return clientGamer; }
+            set { clientGamer = value; }
         }
 
 
