@@ -1,41 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Server.Model
+﻿namespace Twokan.Server.Model
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+
     public class Question
     {
-        private string title;
-        private string content;
-        private List<string> choices;
-        private string result;
-
-        public string Result
+        /// <summary>
+        ///     Contructeur
+        /// </summary>
+        public Question()
         {
-            get { return result; }
-            set { result = value; }
+            this.Choices = new List<string>();
         }
 
-        public List<string> Choices
-        {
-            get { return choices; }
-            set { choices = value; }
-        }
+        public string Title { get; set; }
 
-        public string Content
-        {
-            get { return content; }
-            set { content = value; }
-        }
+        public string Content { get; set; }
 
-        public string Title
-        {
-            get { return title; }
-            set { title = value; }
-        }
+        public ICollection<string> Choices { get; }
 
+        public string Correct { get; set; }
     }
 }
