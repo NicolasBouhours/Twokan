@@ -7,8 +7,6 @@
         /// <summary>
         /// Demande et vérifie le code de la partie à rejoindre
         /// </summary>
-        
-        ////[TODO] Ajout de Main Menu
         public GameJoin()
         {
             string code = string.Empty;
@@ -58,6 +56,7 @@
                 ////TODO] Verifie si le code existe sur le serveur
 
                 ////throw new NotImplementedException("Verifier le code de la partie sur le serveur");
+
             }
 
             return false;
