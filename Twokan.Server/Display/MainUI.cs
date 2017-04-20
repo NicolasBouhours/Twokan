@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Twokan.Server.Model;
 
 namespace Twokan.Server.Display
 {
@@ -72,13 +73,21 @@ namespace Twokan.Server.Display
             this.QuitUI();
         }
 
-        public void StartQuestionUI()
+        public void StartQuestionUI(Question q)
         {
             Console.Clear();
-            Console.WriteLine("Twokan : Questions");
+            Console.WriteLine("Twokan : Question " + q.Title);
+            Console.WriteLine("----------------");
+            Console.WriteLine(q.Content);
             Console.WriteLine("----------------");
 
-            // TODO : Display scores
+            int i = 1;
+
+            foreach (string s in q.Questions)
+            {
+                Console.WriteLine(i + " - " + s);
+                    i++;
+            }
 
             this.QuitUI();
         }
