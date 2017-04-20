@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Client.Display
+﻿namespace Twokan.Client.Display
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     sealed class MainMenu
     {
         public MainMenu()
@@ -32,19 +32,19 @@ namespace Twokan.Client.Display
                     Environment.Exit(0);
                     break;
                 case "1":
-                    //TODO
-                    //Show create room screen
-                    //GameCreate ScreenGameCreate = new GameCreate();
+                    // TODO
+                    // Show create room screen
+                    // GameCreate ScreenGameCreate = new GameCreate();
                     throw new NotImplementedException();
                     break;
                 case "2":
-                    //TODO
-                    //Show join room screen
-                    //GameJoin ScreenGameJoin = new GameJoin();
+                    // TODO
+                    // Show join room screen
+                    // GameJoin ScreenGameJoin = new GameJoin();
                     throw new NotImplementedException();
                     break;
                 default:
-                    //nothing
+                    // nothing
                     Show();
                     break;
             }

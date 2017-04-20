@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Client.Display
+﻿namespace Twokan.Client.Display
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     sealed class ParametersMenu
     {
         #region Fields
@@ -35,8 +35,8 @@ namespace Twokan.Client.Display
 
             if(input == "yes")
             {
-                //TODO
-                //Start game !
+                // TODO
+                // Start game !
                 throw new NotImplementedException();
             } else
             {
