@@ -1,10 +1,6 @@
 ﻿namespace Twokan.Server.Model
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class Log
     {
@@ -31,5 +27,11 @@
             set { action = value; }
         }
 
+        public Log(string action, DateTime date, Gamer gamer)
+        {
+            this.action = action;
+            this.date = date;
+            this.gamer = gamer;
+        }
     }
 }
