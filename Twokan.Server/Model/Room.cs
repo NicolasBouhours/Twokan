@@ -8,7 +8,7 @@
 
         public ICollection<Question> ListQuestions { get;  }
 
-        public ICollection<Gamer> ListGamers;
+        public ICollection<Gamer> ListGamers { get; }
 
         public Room()
         {
