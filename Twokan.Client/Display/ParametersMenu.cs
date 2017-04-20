@@ -23,8 +23,8 @@ namespace Twokan.Client.Display
             WinPoint = Ask("Win point");
 
             Console.WriteLine("---------Game is ready---------");
-            Console.WriteLine("Timing = " + Timing + " second(s)");
-            Console.WriteLine("WinPoint = " + WinPoint);
+            Console.WriteLine("Timing = " + Timing.ToString() + " second(s)");
+            Console.WriteLine("WinPoint = " + WinPoint.ToString());
             Console.WriteLine("Start Game ? (yes/no)");
 
             string input = String.Empty;
@@ -49,10 +49,10 @@ namespace Twokan.Client.Display
         private int Ask(string subject)
         {
             bool error = true;
-            int intInput = -1;
+            int intInput;
             do
             {
-                Console.WriteLine(subject+":");
+                Console.WriteLine(subject.ToString()+":");
                 string input = Console.ReadLine();
                 
                 if (int.TryParse(input, out intInput))
