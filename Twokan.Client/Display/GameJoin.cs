@@ -49,6 +49,12 @@
                 ////TODO] Check if the code exist on the server
 
                 ////throw new NotImplementedException("Verifier le code de la partie sur le serveur");
+                // TODO
+                // Delete this when RELEASE
+                if (codeNum == 1234)
+                {
+                    return true;
+                }
             }
 
             return false;
