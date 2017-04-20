@@ -11,8 +11,7 @@ namespace Twokan.Server
     {
         static void Main(string[] args)
         {
-            MainUI mainUI = new MainUI();
-            mainUI.StartMainUI();
+            MainUI.StartMainUI();
         }
     }
 }

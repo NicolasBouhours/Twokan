@@ -11,7 +11,7 @@ namespace Twokan.Server.Display
     class MainUI
     {
 
-        public void StartMainUI() {
+        public static void StartMainUI() {
             Console.Clear();
             Console.WriteLine("Twokan : serveur");
             Console.WriteLine("----------------");
@@ -34,98 +34,16 @@ namespace Twokan.Server.Display
                 switch (choice)
                 {
                     case "1":
-                        this.StartScoreUI(room);
+                        ScoreUI.StartScoreUI(room);
                         break;
                     case "2":
-                        this.StartLogUI(logs);
+                        LogUI.StartLogUI(logs);
                         break;
                     case "3":
-                        this.StartRoomUI();
+                        RoomUI.StartRoomUI(room);
                         break;
                 }
             } while (choice != "1" || choice != "2" || choice != "3");
-        }
-
-        public void StartLogUI(List<Log> logs)
-        {
-            Console.Clear();
-            Console.WriteLine("Twokan : Logs");
-            Console.WriteLine("----------------");
-
-            // TODO : Display logs
-            foreach(Log l in logs) {
-                Console.WriteLine(l.Date.ToString() + " : " + l.Gamer.Name + " " + l.Action);
-            }
-
-            this.QuitUI();
-        }
-
-        public void StartScoreUI(Room room)
-        {
-            Console.Clear();
-            Console.WriteLine("Twokan : Scores");
-            Console.WriteLine("----------------");
-
-            // TODO : Display scores
-
-           if(room != null)
-            {
-                List<Gamer> gamers = room.ListGamers;
-                if(gamers != null && gamers.Count > 0)
-                {
-                    foreach (Gamer gamer in gamers)
-                    {
-                        Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score));
-                    }
-                    Console.WriteLine("----------------");
-                }
-            }
-
-
-
-            this.QuitUI();
-        }
-
-        public void StartRoomUI()
-        {
-            Console.Clear();
-            Console.WriteLine("Twokan : Room ID");
-            Console.WriteLine("----------------");
-
-            // TODO : Display room info
-
-            this.QuitUI();
-        }
-
-        public void StartQuestionUI(Question q)
-        {
-            Console.Clear();
-            Console.WriteLine("Twokan : Question " + q.Title);
-            Console.WriteLine("----------------");
-            Console.WriteLine(q.Content);
-            Console.WriteLine("----------------");
-
-            int i = 1;
-
-            foreach (string s in q.Choices)
-            {
-                Console.WriteLine(i + " - " + s);
-                    i++;
-            }
-
-            this.QuitUI();
-        }
-
-        private void QuitUI()
-        {
-            String code = "";
-            do
-            {
-                Console.WriteLine("X pour quitter");
-                code = Console.ReadLine().Trim();
-            } while (code != "x");
-
-            this.StartMainUI();
         }
     }
 }
