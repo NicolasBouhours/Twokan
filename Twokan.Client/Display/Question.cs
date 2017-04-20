@@ -5,9 +5,9 @@
     public class Question
     {
         /// <summary>
-        /// Ecran des questions 
+        /// Display about question 
         /// </summary>
-        /// <param name="code">numéro de la partie</param>
+        /// <param name="code">number of the game</param>
         public Question(string code)
         {
             string saisie = string.Empty;
@@ -17,31 +17,31 @@
             Console.WriteLine("Appuyer sur une touche pour continuer");
             saisie = Console.ReadLine();
 
-            ////Regarde si le joueur souhaite quitter la partie et le fait quitter
+            ////Check if the player want quit and quit him 
             if (this.CheckIfHeWantLeave(saisie))
             {
                 this.QuitGame();
             }
 
-            ////[TODO] Recupére les questions du jeux sur le serveur et commence le Jeux
+            ////[TODO] Get the questions on the server
 
-            ////throw new NotImplementedException("Aucune question sur le serveur");
+            ////throw new NotImplementedException(No question on the server");
         }
 
         /// <summary>
-        /// Renvoi un boolean pour savoir si le joueur veux vraiment quiiter
+        /// Check if the player want really quit
         /// </summary>
-        /// <param name="saisie">Saisie de l'utilisateur</param>
+        /// <param name="saisie">Input of the user</param>
         /// <returns></returns>
         public bool CheckIfHeWantLeave(string saisie)
         {
-            ////Permet de retourner au menu
+            ////Go back in the menu
             if (saisie == "q")
             {
                 Console.WriteLine("Etes-vous sûr de vouloir quitter ? (Y/N)");
                 saisie = Console.ReadLine();
 
-                ////Regarde si il souhaite vraiment quitter
+                ////If he want really quit
                 if (saisie == "Y")
                 {
                     return true;
@@ -56,11 +56,11 @@
         }
 
         /// <summary>
-        /// Retourne au Main Menu
+        /// Go back in the Main Menu
         /// </summary>
         public void QuitGame()
         {
-            //// [TODO] Retourner sur le main menu
+            //// [TODO] GO back in the main menu
 
             ////[TODO]
 

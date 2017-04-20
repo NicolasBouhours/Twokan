@@ -5,25 +5,25 @@
     public class GameJoin
     {
         /// <summary>
-        /// Demande et vérifie le code de la partie à rejoindre
+        /// Ask and verify the code of the game
         /// </summary>
         public GameJoin()
         {
             string code = string.Empty;
 
-            ////Demande le code de la partie à rejoindre
+            ////Ask the code of the game
             Console.Clear();
             Console.WriteLine("Code de la partie ?");
             code = Console.ReadLine();
 
-            ////Regarde si le code existe et si il est au bon format
+            ////Check the format of the code
             while (!this.CheckIfCodeExist(code))
             {
                 Console.Clear();
                 Console.WriteLine("Ce code n'est pas valide veuillez en ressaisir un ou 'q' pour quitter");
                 code = Console.ReadLine();
 
-                ////Renvoyer à l'ecran précédent nommé MainMenu
+                ////Go back in the Main menu
                 if (code == "q")
                 {
                     ////TODO]
@@ -33,23 +33,23 @@
                 }
             }
 
-            ////On redirige vers l'ecran quaestion
+            ////Go at the question display
             Question q  = new Question(code);
         }
 
         /// <summary>
-        /// Regarde si le code est au bon format et demande au serveur si la partie existe
+        /// Check the format code and ask at the server if exist
         /// </summary>
-        /// <param name="code">Code saisie par l'utilisateur</param>
+        /// <param name="code">Output by the user</param>
         /// <returns>Result</returns>
         public bool CheckIfCodeExist(string code)
         {
             int codeNum;
 
-            ////Verifie le format du code
+            ////Check the format code
             if (int.TryParse(code, out codeNum))
             {
-                ////TODO] Verifie si le code existe sur le serveur
+                ////TODO] Check if the code exist on the server
 
                 ////throw new NotImplementedException("Verifier le code de la partie sur le serveur");
             }
