@@ -6,7 +6,7 @@
 
     public class ScoreUI
     {
-        public static void StartScoreUI(Room room)
+        public static void Start(Room room)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Scores");

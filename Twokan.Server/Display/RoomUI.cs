@@ -6,7 +6,7 @@
 
     public class RoomUI
     {
-        public static void StartRoomUI(Room r)
+        public static void Start(Room r)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Room" + r.Id);
@@ -15,11 +15,11 @@
             // TODO : Display room info
             foreach (Question q in r.ListQuestions)
             {
-                QuestionUI.StartQuestionUI(q);
+                QuestionUI.Start(q);
                 Thread.Sleep(15000);
             }
 
-            ScoreUI.StartScoreUI(r);
+            ScoreUI.Start(r);
         }
     }
 }

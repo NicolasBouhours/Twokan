@@ -13,7 +13,7 @@
                 code = Console.ReadLine().Trim();
             } while (code != "x");
 
-            MainUI.StartMainUI();
+            MainUI.Start();
         }
     }
 }

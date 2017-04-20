@@ -5,7 +5,7 @@
 
     public class QuestionUI
     {
-        public static void StartQuestionUI(Question q)
+        public static void Start(Question q)
         {
             Console.Clear();
             Console.WriteLine(String.Format("Twokan : Question {0}", q.Title));

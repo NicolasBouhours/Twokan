@@ -9,7 +9,7 @@
 
     public class LogUI
     {
-        public static void StartLogUI(List<Log> logs)
+        public static void Start(List<Log> logs)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Logs");

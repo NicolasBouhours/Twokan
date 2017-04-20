@@ -7,7 +7,7 @@
     class MainUI
     {
 
-        public static void StartMainUI() {
+        public static void Start() {
             Console.Clear();
             Console.WriteLine("Twokan : serveur");
             Console.WriteLine("----------------");
@@ -30,13 +30,13 @@
                 switch (choice)
                 {
                     case "1":
-                        ScoreUI.StartScoreUI(room);
+                        ScoreUI.Start(room);
                         break;
                     case "2":
-                        LogUI.StartLogUI(logs);
+                        LogUI.Start(logs);
                         break;
                     case "3":
-                        RoomUI.StartRoomUI(room);
+                        RoomUI.Start(room);
                         break;
                 }
             } while (choice != "1" || choice != "2" || choice != "3");
