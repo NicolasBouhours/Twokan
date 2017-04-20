@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace Twokan.Core
+﻿namespace Twokan.Core
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Net.Sockets;
+    using System.Text;
+    using System.Threading;
+    using System.Threading.Tasks;
+
     public abstract class TwokanCoreClient
     {
         /// <summary>
@@ -51,8 +52,16 @@ namespace Twokan.Core
 
             Array.Copy(data, finalDatas, data.Length);
 
-            stream.Write(finalDatas, 0, finalDatas.Length);
-            stream.Flush();
+            try
+            {
+                stream.Write(finalDatas, 0, finalDatas.Length);
+                stream.Flush();
+            }
+            catch (IOException)
+            {
+                Console.WriteLine($"Connection aborted");
+                this.Close();
+            }
         }
 
         /// <summary>
@@ -69,7 +78,19 @@ namespace Twokan.Core
                 string responseData = string.Empty;
 
                 // Read the first batch of the TcpServer response bytes.
-                Int32 bytes = stream.Read(data, 0, data.Length);
+                Int32 bytes;
+
+                try
+                {
+                    bytes = stream.Read(data, 0, data.Length);
+                }
+                catch (IOException ex)
+                {
+                    Console.WriteLine($"Connection aborted");
+                    this.Close();
+                    break;
+                }
+
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
 
                 TwokanMessage message = new TwokanMessage();

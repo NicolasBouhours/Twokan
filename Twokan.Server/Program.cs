@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Server
+﻿namespace Twokan.Server
 {
-    class Program
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public sealed class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             bool isRunning = true;
             Console.WriteLine("Twokan : serveur");
@@ -19,8 +19,7 @@ namespace Twokan.Server
             while(isRunning)
             {
                 server.Send(null, "test");
-            }
-            
+            }            
         }
     }
 }

@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace Twokan.Client
 {
-    class Program
-    {       
-
-        static void Main(string[] args)
+    public sealed class Program
+    {      
+        public static void Main(string[] args)
         {
             bool isRunning = true;
             Console.WriteLine("Twokan : client");
 
-            TwokanClient client = new TwokanClient("127.0.0.1", 2000);
+            TwokanClient client = new TwokanClient("127.0.0.1", 2000, "Suliac");
 
             while(isRunning)
             {
@@ -23,10 +22,9 @@ namespace Twokan.Client
             }
 
             client.Close();
-                           
-            Console.ReadLine();
-        }
 
-        
+            Console.WriteLine("client closed");
+            Console.ReadLine();
+        }        
     }
 }
