@@ -8,14 +8,14 @@ namespace Twokan.Client.Display
 {
     public class Question
     {
-        string saisie = "";
-
         /// <summary>
         /// [TODO] Ecran des questions 
         /// </summary>
         /// <param name="code">numéro de la partie</param>
         public Question(string code)
         {
+            string saisie = string.Empty;
+
             Console.Clear();
             Console.WriteLine("Bienvenu dans la partie numéro "+code+" (q pour retourner au menu)" );
             Console.WriteLine("Aucune questions sur le serveur pour le moment !");

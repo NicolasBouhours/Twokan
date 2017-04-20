@@ -11,13 +11,13 @@ namespace Twokan.Client.Display
 {
     public class GameJoin
     {
-        string code = "";
-        
         /// <summary>
         /// [TODO] Demande et vérifie le code de la partie à rejoindre
         /// </summary>
         public GameJoin()
         {
+            string code = string.Empty;
+
             //Demande le code de la partie à rejoindre
             Console.Clear();
             Console.WriteLine("Code de la partie ?");
