@@ -9,7 +9,7 @@
 
     public static class LogUI
     {
-        public static void Start(List<Log> clientsLogs)
+        public static void Start(ICollection<Log> clientsLogs)
         {
             if (clientsLogs != null)
             {
