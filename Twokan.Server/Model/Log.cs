@@ -4,19 +4,16 @@
 
     public class Log
     {
-        // Test action
         private string action;
 
-        // Test date
         private DateTime date;
 
-        // Hey ti's our gamer !
-        private Gamer clientGamer;
+        private Gamer client;
 
-        public Gamer ClientGamer
+        public Gamer Client
         {
-            get { return clientGamer; }
-            set { clientGamer = value; }
+            get { return client; }
+            set { client = value; }
         }
 
         public DateTime Date
