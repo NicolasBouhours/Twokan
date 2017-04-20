@@ -19,7 +19,7 @@
 
                 foreach (string s in q.Choices)
                 {
-                    Console.WriteLine(String.Format("{0} - {1}", i, s));
+                    Console.WriteLine(String.Format("{0} - {1}", i.ToString(), s));
                     i++;
                 }
 

@@ -11,7 +11,7 @@
             if (r != null)
             {
                 Console.Clear();
-                Console.WriteLine(String.Format("Twokan : Room {0}", r.Id));
+                Console.WriteLine(String.Format("Twokan : Room {0}", r.Id.ToString()));
                 Console.WriteLine("----------------");
 
                 // TODO : Display room info

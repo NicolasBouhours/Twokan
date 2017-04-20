@@ -23,7 +23,7 @@
                     {
                         foreach (Gamer gamer in gamers)
                         {
-                            Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score));
+                            Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score.ToString()));
                         }
                         Console.WriteLine("----------------");
                     }
