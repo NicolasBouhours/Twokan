@@ -31,7 +31,6 @@
             ////throw new NotImplementedException("Aucune question sur le serveur");
         }
 
-
         /// <summary>
         /// Renvoi un boolean pour savoir si le joueur veux vraiment quiiter
         /// </summary>
@@ -54,18 +53,15 @@
                 {
                     return false;
                 }
-
             }
             return false;
         }
-
 
         /// <summary>
         /// Retourne au Main Menu
         /// </summary>
         public void QuitGame()
         {
-
             //// [TODO] Retourner sur le main menu
 
             ////[TODO]
