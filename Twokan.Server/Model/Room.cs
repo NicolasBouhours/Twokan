@@ -10,11 +10,11 @@
     {
         private int id;
 
-        private List<Question> listQuestions;
+        private ICollection<Question> listQuestions;
 
-        private List<Gamer> listGamers;
+        private ICollection<Gamer> listGamers;
 
-        public List<Gamer> ListGamers
+        public ICollection<Gamer> ListGamers
         {
             get { return listGamers; }
             set { listGamers = value; }
@@ -26,7 +26,7 @@
             set { id = value; }
         }
 
-        public List<Question> ListQuestions
+        public ICollection<Question> ListQuestions
         {
             get { return listQuestions; }
             set { listQuestions = value; }

@@ -18,10 +18,9 @@
 
                 if (room != null)
                 {
-                    List<Gamer> gamers = room.ListGamers;
-                    if (gamers != null && gamers.Count > 0)
+                    if (room.ListGamers != null && room.ListGamers.Count > 0)
                     {
-                        foreach (Gamer gamer in gamers)
+                        foreach (Gamer gamer in room.ListGamers)
                         {
                             Console.WriteLine(String.Format("Gamer {0} : {1} point(s)", gamer.Name, gamer.Score.ToString()));
                         }

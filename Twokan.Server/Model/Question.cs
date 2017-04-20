@@ -10,7 +10,7 @@
     {
         private string title;
         private string content;
-        private List<string> choices;
+        private ICollection<string> choices;
         private string result;
 
         public string Result
@@ -19,7 +19,7 @@
             set { result = value; }
         }
 
-        public List<string> Choices
+        public ICollection<string> Choices
         {
             get { return choices; }
             set { choices = value; }
