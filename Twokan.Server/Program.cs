@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Twokan.Server
+﻿namespace Twokan.Server
 {
-    class Program
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Twokan : serveur");
             Console.ReadLine();
