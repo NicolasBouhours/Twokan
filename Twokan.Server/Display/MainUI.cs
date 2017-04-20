@@ -24,6 +24,7 @@ namespace Twokan.Server.Display
             room.Id = 1;
             List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2,"Flo",10) };
             room.ListGamers = gamers;
+            List<Log> logs = new List<Log>();
 
 
             do
@@ -36,7 +37,7 @@ namespace Twokan.Server.Display
                         this.StartScoreUI(room);
                         break;
                     case "2":
-                        this.StartLogUI();
+                        this.StartLogUI(logs);
                         break;
                     case "3":
                         this.StartRoomUI();
@@ -45,13 +46,16 @@ namespace Twokan.Server.Display
             } while (choice != "1" || choice != "2" || choice != "3");
         }
 
-        public void StartLogUI()
+        public void StartLogUI(List<Log> logs)
         {
             Console.Clear();
             Console.WriteLine("Twokan : Logs");
             Console.WriteLine("----------------");
 
             // TODO : Display logs
+            foreach(Log l in logs) {
+                Console.WriteLine(l.Date.ToString() + " : " + l.Gamer.Name + " " + l.Action);
+            }
 
             this.QuitUI();
         }

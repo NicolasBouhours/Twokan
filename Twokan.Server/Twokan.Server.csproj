@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Display\MainUI.cs" />
     <Compile Include="Model\Gamer.cs" />
+    <Compile Include="Model\Log.cs" />
     <Compile Include="Model\Question.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Program.cs" />
