@@ -8,7 +8,7 @@
 
         private DateTime date;
 
-        private Gamer gamer;
+        private Gamer clientGamer;
 
         public Gamer ClientGamer
         {
