@@ -10,8 +10,17 @@ namespace Twokan.Server
     {
         static void Main(string[] args)
         {
+            bool isRunning = true;
             Console.WriteLine("Twokan : serveur");
-            Console.ReadLine();
+
+            TwokanServer server = new TwokanServer("127.0.0.1", 2000);
+
+            // Behaviour server here
+            while(isRunning)
+            {
+                server.Send(null, "test");
+            }
+            
         }
     }
 }
