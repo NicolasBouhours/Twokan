@@ -18,7 +18,7 @@
 
 
             ////Regarde si le code existe et si il est au bon format
-            while (!CheckIfCodeExist(code))
+            while (!this.CheckIfCodeExist(code))
             {
                 Console.Clear();
                 Console.WriteLine("Ce code n'est pas valide veuillez en ressaisir un ou 'q' pour quitter");
@@ -58,7 +58,6 @@
                 ////throw new NotImplementedException("Verifier le code de la partie sur le serveur");
 
             }
-
             return false;
         }
     }

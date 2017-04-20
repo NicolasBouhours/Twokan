@@ -15,14 +15,14 @@
             string saisie = string.Empty;
 
             Console.Clear();
-            Console.WriteLine("Bienvenu dans la partie numéro "+code+" (q pour retourner au menu)" );
+            Console.WriteLine("Bienvenu dans la partie numéro " + code + " (q pour retourner au menu)" );
             Console.WriteLine("Appuyer sur une touche pour continuer");
             saisie = Console.ReadLine();
 
             ////Regarde si le joueur souhaite quitter la partie et le fait quitter
-            if (CheckIfHeWantLeave(saisie))
+            if (this.CheckIfHeWantLeave(saisie))
             {
-                QuitGame();
+                this.QuitGame();
             }
 
 
@@ -37,7 +37,7 @@
         /// </summary>
         /// <param name="saisie">Saisie de l'utilisateur</param>
         /// <returns></returns>
-        public Boolean CheckIfHeWantLeave(string saisie)
+        public bool CheckIfHeWantLeave(string saisie)
         {
             ////Permet de retourner au menu
             if (saisie == "q")
@@ -56,7 +56,6 @@
                 }
 
             }
-
             return false;
         }
 
@@ -64,10 +63,10 @@
         /// <summary>
         /// Retourne au Main Menu
         /// </summary>
-        
-        //// [TODO] Retourner sur le main menu
         public void QuitGame()
         {
+
+            //// [TODO] Retourner sur le main menu
 
             ////[TODO]
 
