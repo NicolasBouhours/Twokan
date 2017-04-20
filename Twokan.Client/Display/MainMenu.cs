@@ -32,10 +32,10 @@
                     Environment.Exit(0);
                     break;
                 case "1":
-                    ParametersMenu ScreenParametersMenu = new ParametersMenu();
+                    ParametersMenu screenParametersMenu = new ParametersMenu();
                     break;
                 case "2":
-                    GameJoin ScreenGameJoin = new GameJoin();
+                    GameJoin screenGameJoin = new GameJoin();
                     break;
                 default:
                     // nothing
