@@ -20,7 +20,7 @@
                 // TODO : Display logs
                 foreach (Log l in clientsLogs)
                 {
-                    Console.WriteLine(l.Date.ToString() + " : " + l.ClientGamer.Name + " " + l.Action);
+                    Console.WriteLine(l.Date.ToString() + " : " + l.Client.Name + " " + l.Action);
                 }
 
                 Util.QuitUI();
