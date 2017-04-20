@@ -8,18 +8,21 @@
     {
         public static void Start(Room r)
         {
-            Console.Clear();
-            Console.WriteLine(String.Format("Twokan : Room {0}", r.Id));
-            Console.WriteLine("----------------");
-
-            // TODO : Display room info
-            foreach (Question q in r.ListQuestions)
+            if (r != null)
             {
-                QuestionUI.Start(q);
-                Thread.Sleep(15000);
-            }
+                Console.Clear();
+                Console.WriteLine(String.Format("Twokan : Room {0}", r.Id));
+                Console.WriteLine("----------------");
 
-            ScoreUI.Start(r);
+                // TODO : Display room info
+                foreach (Question q in r.ListQuestions)
+                {
+                    QuestionUI.Start(q);
+                    Thread.Sleep(15000);
+                }
+
+                ScoreUI.Start(r);
+            }
         }
     }
 }

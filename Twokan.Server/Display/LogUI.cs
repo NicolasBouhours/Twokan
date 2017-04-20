@@ -11,17 +11,20 @@
     {
         public static void Start(List<Log> logs)
         {
-            Console.Clear();
-            Console.WriteLine("Twokan : Logs");
-            Console.WriteLine("----------------");
-
-            // TODO : Display logs
-            foreach (Log l in logs)
+            if (logs != null)
             {
-                Console.WriteLine(l.Date.ToString() + " : " + l.Gamer.Name + " " + l.Action);
-            }
+                Console.Clear();
+                Console.WriteLine("Twokan : Logs");
+                Console.WriteLine("----------------");
 
-            Util.QuitUI();
+                // TODO : Display logs
+                foreach (Log l in logs)
+                {
+                    Console.WriteLine(l.Date.ToString() + " : " + l.Gamer.Name + " " + l.Action);
+                }
+
+                Util.QuitUI();
+            }
         }
     }
 }
