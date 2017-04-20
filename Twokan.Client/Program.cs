@@ -11,21 +11,13 @@
     {
         #region Fields
 
-        static MainMenu screenMainMenu;
-        
+        public static MainMenu screenMainMenu;
+
         #endregion
 
-        private static void Main()
-        {
-            Console.WriteLine("Twokan : client");
-            ScreenMainMenu = new MainMenu();
-
-            Console.ReadLine();
-        }
-
         #region Properties
-        
-        internal static MainMenu ScreenMainMenu
+
+        public static MainMenu ScreenMainMenu
         {
             get
             {
@@ -39,5 +31,15 @@
         }
 
         #endregion
+
+        private static void Main()
+        {
+            Console.WriteLine("Twokan : client");
+            ScreenMainMenu = new MainMenu();
+
+            Console.ReadLine();
+        }
+
+
     }
 }

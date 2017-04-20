@@ -6,7 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    sealed class ParametersMenu
+    public sealed class ParametersMenu
     {
         #region Fields
 
@@ -42,6 +42,7 @@
             }
             else
             {
+                
                 Program.ScreenMainMenu.Show();
             }
         }
