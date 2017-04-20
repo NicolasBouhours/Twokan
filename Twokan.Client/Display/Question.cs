@@ -24,7 +24,7 @@
             }
 
             ////[TODO] Get the questions on the server
-            throw new NotImplementedException("No question on the server");
+            throw new NotImplementedException();
         }
 
         /// <summary>
