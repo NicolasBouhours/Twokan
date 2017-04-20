@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Twokan.Client
 {
-    public class Program
+    public static class Program
     {
-        private void Main()
+        static void Main()
         {
             Console.WriteLine("Twokan : client");
             Console.ReadLine();
