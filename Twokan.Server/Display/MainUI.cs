@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using Twokan.Server.Model;
 
-    class MainUI
+    public static class MainUI
     {
 
         public static void Start() {

@@ -3,7 +3,7 @@
     using System;
     using Twokan.Server.Model;
 
-    public class QuestionUI
+    public static class QuestionUI
     {
         public static void Start(Question q)
         {

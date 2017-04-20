@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using Twokan.Server.Model;
 
-    public class ScoreUI
+    public static class ScoreUI
     {
         public static void Start(Room room)
         {

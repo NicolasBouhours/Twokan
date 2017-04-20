@@ -7,7 +7,7 @@
     using System.Threading.Tasks;
     using Twokan.Server.Model;
 
-    public class LogUI
+    public static class LogUI
     {
         public static void Start(List<Log> logs)
         {

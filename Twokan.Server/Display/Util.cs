@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Util
+    public static class Util
     {
         public static void QuitUI()
         {

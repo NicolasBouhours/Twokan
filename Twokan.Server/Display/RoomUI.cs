@@ -4,7 +4,7 @@
     using System.Threading;
     using Twokan.Server.Model;
 
-    public class RoomUI
+    public static class RoomUI
     {
         public static void Start(Room r)
         {
