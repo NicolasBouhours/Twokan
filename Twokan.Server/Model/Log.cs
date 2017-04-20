@@ -27,5 +27,11 @@
             set { action = value; }
         }
 
+        public Log(string action, DateTime date, Gamer gamer)
+        {
+            this.action = action;
+            this.date = date;
+            this.gamer = gamer;
+        }
     }
 }
