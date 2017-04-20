@@ -38,6 +38,9 @@
             set { title = value; }
         }
 
+        /// <summary>
+        ///     Contructeur
+        /// </summary>
         public Question()
         {
             this.choices = new List<String>();
