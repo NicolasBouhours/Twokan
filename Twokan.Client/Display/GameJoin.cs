@@ -30,7 +30,7 @@
                 {
                     //[TODO]
                     //MainMenu main = new MainMenu();
-                    throw new NotImplementedException("Main menu not create");
+                    //throw new NotImplementedException("Main menu not create");
                 }
             }
 
@@ -52,7 +52,7 @@
             if (int.TryParse(code, out codeNum))
             {
                 //[TODO] Verifie si le code existe sur le serveur
-                throw new NotImplementedException("Verifier le code de la partie sur le serveur");
+                //throw new NotImplementedException("Verifier le code de la partie sur le serveur");
             }
 
             return false;
