@@ -19,30 +19,61 @@
         {
             Console.WriteLine("Menu: Parameters");
             
-            Timing = Ask("Timing (seconds)");
-            WinPoint = Ask("Win point");
+            this.Timing = Ask("Timing (seconds)");
+            this.WinPoint = Ask("Win point");
 
             Console.WriteLine("---------Game is ready---------");
-            Console.WriteLine("Timing = " + Timing.ToString() + " second(s)");
-            Console.WriteLine("WinPoint = " + WinPoint.ToString());
+            Console.WriteLine("Timing = " + this.Timing.ToString() + " second(s)");
+            Console.WriteLine("WinPoint = " + this.WinPoint.ToString());
             Console.WriteLine("Start Game ? (yes/no)");
 
             string input = String.Empty;
             do
             {
                 input = Console.ReadLine();
-            } while (input != "yes" && input != "no");
+            }
+            while (input != "yes" && input != "no");
 
             if(input == "yes")
             {
                 // TODO
                 // Start game !
                 throw new NotImplementedException();
-            } else
+            }
+            else
             {
                 Program.ScreenMainMenu.Show();
             }
         }
+
+        #region Properties
+        public int Timing
+        {
+            get
+            {
+                return this.timing;
+            }
+
+            set
+            {
+                this.timing = value;
+            }
+        }
+
+        public int WinPoint
+        {
+            get
+            {
+                return this.winPoint;
+            }
+
+            set
+            {
+                this.winPoint = value;
+            }
+        }
+
+        #endregion
 
         #region Methods
 
@@ -60,7 +91,7 @@
                 Console.WriteLine(subject+":");
                 string input = Console.ReadLine();
                 
-                if (int.TryParse(input, out intInput))
+                if(int.TryParse(input, out intInput))
                 {
                     error = false;
                 }
@@ -68,40 +99,14 @@
                 {
                     Console.WriteLine("Error: Please enter a number, not a string !");
                 }
-            } while (error);
+            }
+            while (error);
 
             return intInput;
         }
 
         #endregion
 
-        #region Properties
-        public int Timing
-        {
-            get
-            {
-                return timing;
-            }
-
-            set
-            {
-                timing = value;
-            }
-        }
-
-        public int WinPoint
-        {
-            get
-            {
-                return winPoint;
-            }
-
-            set
-            {
-                winPoint = value;
-            }
-        }
-
-        #endregion
+        
     }
 }
