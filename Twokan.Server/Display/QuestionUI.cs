@@ -10,7 +10,7 @@
             if (q != null)
             {
                 Console.Clear();
-                Console.WriteLine(String.Format("Twokan : Question {0}", q.Title));
+                Console.WriteLine("Twokan : Question "+ q.Title);
                 Console.WriteLine("----------------");
                 Console.WriteLine(q.Content);
                 Console.WriteLine("----------------");
@@ -19,7 +19,7 @@
 
                 foreach (string s in q.Choices)
                 {
-                    Console.WriteLine(String.Format("{0} - {1}", i.ToString(), s));
+                    Console.WriteLine(i.ToString()+ " - "+ s);
                     i++;
                 }
 
