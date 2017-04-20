@@ -6,8 +6,11 @@
     public class Question
     {
         private string title;
+
         private string content;
+
         private ICollection<string> choices;
+
         private string correct;
 
         public string Correct
@@ -32,6 +35,7 @@
             get { return title; }
             set { title = value; }
         }
+
         public Question()
         {
             this.choices = new List<String>();

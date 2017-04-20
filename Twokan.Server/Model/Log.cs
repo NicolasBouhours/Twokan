@@ -5,15 +5,16 @@
     public class Log
     {
         private string action;
+
         private DateTime date;
-        private Gamer clientGamer;
+
+        private Gamer gamer;
 
         public Gamer ClientGamer
         {
             get { return clientGamer; }
             set { clientGamer = value; }
         }
-
 
         public DateTime Date
         {
