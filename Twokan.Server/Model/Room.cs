@@ -12,6 +12,14 @@ namespace Twokan.Server.Model
 
         private List<Question> listQuestions;
 
+        private List<Gamer> listGamers;
+
+        public List<Gamer> ListGamers
+        {
+            get { return listGamers; }
+            set { listGamers = value; }
+        }
+
         public int Id
         {
             get { return id; }
