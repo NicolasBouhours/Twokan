@@ -6,7 +6,7 @@
     {
         public static void QuitUI()
         {
-            string code = String.Empty;
+            string code = string.Empty;
             do
             {
                 Console.WriteLine("X pour quitter");

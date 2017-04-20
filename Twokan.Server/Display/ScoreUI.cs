@@ -14,8 +14,6 @@
                 Console.WriteLine("Twokan : Scores");
                 Console.WriteLine("----------------");
 
-                //TODO : Display scores
-
                 if (room != null)
                 {
                     if (room.ListGamers != null && room.ListGamers.Count > 0)

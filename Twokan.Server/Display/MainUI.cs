@@ -6,8 +6,8 @@
 
     public static class MainUI
     {
-
-        public static void Start() {
+        public static void Start()
+        {
             Console.Clear();
             Console.WriteLine("Twokan : serveur");
             Console.WriteLine("----------------");
@@ -18,11 +18,10 @@
             string choice;
             Room room = new Room();
             room.Id = 1;
-            List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2,"Flo",10) };
+            List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2, "Flo", 10) };
             room.ListGamers.Add(new Gamer(1, "Nico", 5));
             room.ListGamers.Add(new Gamer(2, "Flo", 10));
-            List <Log> logs = new List<Log>();
-
+            List<Log> logs = new List<Log>();
 
             do
             {
@@ -40,7 +39,8 @@
                         RoomUI.Start(room);
                         break;
                 }
-            } while (choice != "1" || choice != "2" || choice != "3");
+            }
+            while (choice != "1" || choice != "2" || choice != "3");
         }
     }
 }
