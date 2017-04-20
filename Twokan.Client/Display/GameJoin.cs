@@ -42,9 +42,7 @@
         /// Regarde si le code est au bon format et demande au serveur si la partie existe
         /// </summary>
         /// <param name="code">Code saisie par l'utilisateur</param>
-        /// <returns></returns>
-        
-        //// [TODO] Verifie le code sur le serveur
+        /// <returns>Result</returns>
         public bool CheckIfCodeExist(string code)
         {
             int codeNum;
