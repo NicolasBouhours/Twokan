@@ -1,5 +1,6 @@
 ﻿namespace Twokan.Server
 {
+    using Display;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -15,11 +16,9 @@
 
             TwokanServer server = new TwokanServer("127.0.0.1", 2000);
 
-            // Behaviour server here
-            while(isRunning)
-            {
-                server.Send(null, "test");
-            }            
+            MainUI.Start();
+
+            server.Close();        
         }
     }
 }
