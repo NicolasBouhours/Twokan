@@ -13,7 +13,7 @@
             string saisie = string.Empty;
 
             Console.Clear();
-            Console.WriteLine("Bienvenu dans la partie numéro " +code+ "(q pour retourner au menu)");
+            Console.WriteLine("Bienvenu dans la partie numéro "+code+"(q pour retourner au menu)");
             Console.WriteLine("Appuyer sur une touche pour continuer");
             saisie = Console.ReadLine();
 
