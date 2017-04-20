@@ -4,6 +4,9 @@
 
     public static class Util
     {
+        /// <summary>
+        /// Enable to quit the game
+        /// </summary>
         public static void QuitUI()
         {
             string code = string.Empty;
