@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+[assembly: CLSCompliant(true)]
+
 namespace Twokan.Client
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Twokan : client");
             Console.ReadLine();
