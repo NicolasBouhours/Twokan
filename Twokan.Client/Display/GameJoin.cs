@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Twokan.Client.Display;
 
-namespace Twokan.Client
+
+[assembly: CLSCompliant(true)]
+
+namespace Twokan.Client.Display
 {
     public class GameJoin
     {
-        string code = null;
+        string code = "";
         
         /// <summary>
         /// [TODO] Demande et vérifie le code de la partie à rejoindre
@@ -38,7 +40,7 @@ namespace Twokan.Client
             }
 
             //On redirige vers l'ecran quaestion
-            new Question(code);
+            Question q  = new Question(code);
 
 
         }

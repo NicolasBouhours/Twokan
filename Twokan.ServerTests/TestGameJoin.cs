@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Twokan.Client;
+using Twokan.Client.Display;
 
 [assembly: CLSCompliant(true)]
+
 namespace Twokan.ServerTests
 {
     [TestFixture]

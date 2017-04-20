@@ -8,7 +8,7 @@ namespace Twokan.Client.Display
 {
     public class Question
     {
-        string saisie = null;
+        string saisie = "";
 
         /// <summary>
         /// [TODO] Ecran des questions 
