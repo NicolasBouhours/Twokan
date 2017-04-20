@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Display\MainMenu.cs" />
     <Compile Include="Display\ParametersMenu.cs" />
+    <Compile Include="Display\GameJoin.cs" />
+    <Compile Include="Display\Question.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

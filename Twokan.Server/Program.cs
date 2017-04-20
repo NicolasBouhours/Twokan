@@ -1,17 +1,17 @@
-﻿namespace Twokan.Server
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Twokan.Server.Display;
 
-    public static class Program
+namespace Twokan.Server
+{
+    class Program
     {
-        private static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Twokan : serveur");
-            Console.ReadLine();
+            MainUI.StartMainUI();
         }
     }
 }
