@@ -8,7 +8,7 @@ namespace Twokan.Client.Display
 {
     public class Question
     {
-        string saisie;
+        string saisie = null;
 
         /// <summary>
         /// [TODO] Ecran des questions 
@@ -22,13 +22,13 @@ namespace Twokan.Client.Display
             saisie = Console.ReadLine();
 
             //Regarde si le joueur souhaite quitter la partie et le fait quitter
-            if(checkIfHeWantLeave(saisie))
+            if(CheckIfHeWantLeave(saisie))
             {
-                quitGame();
+                QuitGame();
             }
             else //[TODO] A supprimer quand il y aura les questions de disponible
             {
-                quitGame();
+                QuitGame();
             }
 
             //[TODO] Recupére les questions du jeux sur le serveur et commence le Jeux
@@ -42,7 +42,7 @@ namespace Twokan.Client.Display
         /// </summary>
         /// <param name="saisie">Saisie de l'utilisateur</param>
         /// <returns></returns>
-        public Boolean checkIfHeWantLeave(string saisie)
+        public Boolean CheckIfHeWantLeave(string saisie)
         {
             //Permet de retourner au menu
             if (saisie == "q")
@@ -69,7 +69,7 @@ namespace Twokan.Client.Display
         /// <summary>
         /// [TODO] Retourne au Main Menu
         /// </summary>
-        public void quitGame()
+        public void QuitGame()
         {
             //[TODO]
             //MainMenu main = new MainMenu();

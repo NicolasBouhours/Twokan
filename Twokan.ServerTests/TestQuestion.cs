@@ -18,7 +18,7 @@ namespace Twokan.ServerTests
         [Test]
         public void TestCheckIfHeWantLeaveTrue()
         {
-            Question q = new Question("8464");
+            new Question("8464");
             //bool result = q.checkIfHeWantLeave("q");
             bool result = true;
             Assert.AreEqual(true, result);

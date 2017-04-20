@@ -9,7 +9,7 @@ namespace Twokan.Client
 {
     public class GameJoin
     {
-        string code;
+        string code = null;
         
         /// <summary>
         /// [TODO] Demande et vérifie le code de la partie à rejoindre
@@ -23,7 +23,7 @@ namespace Twokan.Client
 
 
             //Regarde si le code existe et si il est au bon format
-            while(!checkIfCodeExist(code))
+            while(!CheckIfCodeExist(code))
             {
                 Console.Clear();
                 Console.WriteLine("Ce code n'est pas valide veuillez en ressaisir un ou 'q' pour quitter");
@@ -38,7 +38,7 @@ namespace Twokan.Client
             }
 
             //On redirige vers l'ecran quaestion
-            Question q = new Question(code);
+            new Question(code);
 
 
         }
@@ -48,7 +48,7 @@ namespace Twokan.Client
         /// </summary>
         /// <param name="code">Code saisie par l'utilisateur</param>
         /// <returns></returns>
-        public bool checkIfCodeExist(string code)
+        public bool CheckIfCodeExist(string code)
         {
             int codeNum;
 

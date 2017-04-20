@@ -20,7 +20,7 @@ namespace Twokan.ServerTests
         public void TestCodeExistTrue()
         {
             GameJoin gj = new GameJoin();
-            bool result = gj.checkIfCodeExist("54654646");
+            bool result = gj.CheckIfCodeExist("54654646");
             Assert.AreEqual(true, result);
 
         }
@@ -32,7 +32,7 @@ namespace Twokan.ServerTests
         public void TestCodeExistFalse()
         {
             GameJoin gj = new GameJoin();
-            bool result = gj.checkIfCodeExist("FFJDKS46546");
+            bool result = gj.CheckIfCodeExist("FFJDKS46546");
             Assert.AreEqual(false, result);
 
         }
