@@ -9,7 +9,7 @@
         public static void Start(Room r)
         {
             Console.Clear();
-            Console.WriteLine("Twokan : Room" + r.Id);
+            Console.WriteLine(String.Format("Twokan : Room {0}", r.Id));
             Console.WriteLine("----------------");
 
             // TODO : Display room info
