@@ -35,6 +35,10 @@
             get { return title; }
             set { title = value; }
         }
+        public Question()
+        {
+            this.choices = new List<String>();
+        }
 
     }
 }

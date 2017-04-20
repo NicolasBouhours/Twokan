@@ -29,5 +29,11 @@
         {
             get { return listQuestions; }
         }
+
+        public Room()
+        {
+            this.listGamers = new List<Gamer>();
+            this.listQuestions = new List<Question>();
+        }
     }
 }
