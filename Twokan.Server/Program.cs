@@ -6,7 +6,7 @@
     {
         static void Main(string[] args)
         {
-            MainUI.StartMainUI();
+            MainUI.Start();
         }
     }
 }
