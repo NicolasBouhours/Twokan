@@ -8,14 +8,12 @@
         /// Ecran des questions 
         /// </summary>
         /// <param name="code">numéro de la partie</param>
-        
-        ////[TODO] Recupèrer les question sur le serveur
         public Question(string code)
         {
             string saisie = string.Empty;
 
             Console.Clear();
-            Console.WriteLine("Bienvenu dans la partie numéro " + code + "(q pour retourner au menu)" );
+            Console.WriteLine("Bienvenu dans la partie numéro "+ code +"(q pour retourner au menu)" );
             Console.WriteLine("Appuyer sur une touche pour continuer");
             saisie = Console.ReadLine();
 
@@ -24,7 +22,6 @@
             {
                 this.QuitGame();
             }
-
 
             ////[TODO] Recupére les questions du jeux sur le serveur et commence le Jeux
 
@@ -54,6 +51,7 @@
                     return false;
                 }
             }
+
             return false;
         }
 

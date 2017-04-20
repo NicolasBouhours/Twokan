@@ -16,7 +16,6 @@
             Console.WriteLine("Code de la partie ?");
             code = Console.ReadLine();
 
-
             ////Regarde si le code existe et si il est au bon format
             while (!this.CheckIfCodeExist(code))
             {
@@ -54,6 +53,7 @@
 
                 ////throw new NotImplementedException("Verifier le code de la partie sur le serveur");
             }
+
             return false;
         }
     }
