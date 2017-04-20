@@ -6,14 +6,6 @@
 
     public class Question
     {
-        public string Title { get; set; }
-
-        public string Content { get; set; }
-
-        public ICollection<string> Choices { get; }
-
-        public string Correct{ get; set; }
-
         /// <summary>
         ///     Contructeur
         /// </summary>
@@ -21,5 +13,13 @@
         {
             this.Choices = new List<string>();
         }
+
+        public string Title { get; set; }
+
+        public string Content { get; set; }
+
+        public ICollection<string> Choices { get; }
+
+        public string Correct { get; set; }
     }
 }
