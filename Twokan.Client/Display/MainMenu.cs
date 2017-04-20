@@ -10,7 +10,7 @@
     {
         public MainMenu()
         {
-            Show();
+            this.Show();
         }
 
         #region Methods
@@ -25,7 +25,7 @@
             Console.WriteLine("2 = Join room");
             Console.WriteLine("0 = Exit");
 
-            String input = Console.ReadLine();
+            string input = Console.ReadLine();
             switch (input)
             {
                 case "0":
@@ -45,7 +45,7 @@
                     break;
                 default:
                     // nothing
-                    Show();
+                    this.Show();
                     break;
             }
         }

@@ -19,22 +19,22 @@
         {
             Console.WriteLine("Menu: Parameters");
             
-            this.Timing = Ask("Timing (seconds)");
-            this.WinPoint = Ask("Win point");
+            this.Timing = this.Ask("Timing (seconds)");
+            this.WinPoint = this.Ask("Win point");
 
             Console.WriteLine("---------Game is ready---------");
             Console.WriteLine("Timing = " + this.Timing.ToString() + " second(s)");
             Console.WriteLine("WinPoint = " + this.WinPoint.ToString());
             Console.WriteLine("Start Game ? (yes/no)");
 
-            string input = String.Empty;
+            string input = string.Empty;
             do
             {
                 input = Console.ReadLine();
             }
             while (input != "yes" && input != "no");
 
-            if(input == "yes")
+            if (input == "yes")
             {
                 // TODO
                 // Start game !
@@ -88,10 +88,10 @@
             int intInput;
             do
             {
-                Console.WriteLine(subject+":");
+                Console.WriteLine(subject + ":");
                 string input = Console.ReadLine();
                 
-                if(int.TryParse(input, out intInput))
+                if (int.TryParse(input, out intInput))
                 {
                     error = false;
                 }
@@ -106,7 +106,5 @@
         }
 
         #endregion
-
-        
     }
 }
