@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Twokan.Server.Display;
 
 namespace Twokan.Server
 {
@@ -10,8 +11,9 @@ namespace Twokan.Server
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Twokan : serveur");
-            Console.ReadLine();
+            MainUI mainUI = new MainUI();
+
+            mainUI.StartMainUI();
         }
     }
 }
