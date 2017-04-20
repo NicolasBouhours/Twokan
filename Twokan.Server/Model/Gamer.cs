@@ -32,11 +32,11 @@
             set { score = value; }
         }
 
-        public Gamer(int id, String name,int score)
+        public Gamer(int paramId, String paramName,int paramScore)
         {
-            this.id = id;
-            this.name = name;
-            this.score = score;
+            this.id = paramId;
+            this.name = paramName;
+            this.score = paramScore;
         }
     }
 }

@@ -9,16 +9,16 @@
 
     public static class LogUI
     {
-        public static void Start(List<Log> logs)
+        public static void Start(List<Log> clientsLogs)
         {
-            if (logs != null)
+            if (clientsLogs != null)
             {
                 Console.Clear();
                 Console.WriteLine("Twokan : Logs");
                 Console.WriteLine("----------------");
 
                 // TODO : Display logs
-                foreach (Log l in logs)
+                foreach (Log l in clientsLogs)
                 {
                     Console.WriteLine(l.Date.ToString() + " : " + l.Gamer.Name + " " + l.Action);
                 }

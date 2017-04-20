@@ -15,7 +15,7 @@
             Console.WriteLine("2 - Log");
             Console.WriteLine("3 - Start Game");
 
-            string choice = "";
+            string choice;
             Room room = new Room();
             room.Id = 1;
             List<Gamer> gamers = new List<Gamer> { new Gamer(1, "Nico", 5),new Gamer(2,"Flo",10) };
