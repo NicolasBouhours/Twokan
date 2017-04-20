@@ -12,7 +12,7 @@
             string code = string.Empty;
             do
             {
-                Console.WriteLine("X pour quitter");
+                Console.WriteLine("Press x to exit");
                 code = Console.ReadLine().Trim();
             }
             while (code != "x");
